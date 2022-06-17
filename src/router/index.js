@@ -1,9 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '../views/EventList.vue'
 import EventDetails from '../views/EventDetails.vue'
+import NotFoundComponent from '../views/NotFoundComponent.vue'
 import About from '../views/About.vue'
 
 const routes = [
+  {
+    path: '/*',
+    component: NotFoundComponent
+  },
   {
     path: '/',
     name: 'EventList',
